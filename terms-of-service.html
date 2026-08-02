@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APP_NAME — Terms of Service</title>
+  <meta name="description" content="APP_NAME Terms of Service by Luminex Labs" />
+  <style>
+    :root {
+      --primary: #007AFF;
+      --bg: #FFFFFF;
+      --surface: #FFFFFF;
+      --text: #1C1C1E;
+      --muted: #8E8E93;
+      --border: #E5E5EA;
+      --soft: #F6F7FB;
+      --max: 860px;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.04);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1C1C1E;
+        --surface: #232326;
+        --text: #F5F5F7;
+        --muted: #A1A1A8;
+        --border: #38383A;
+        --soft: #2A2A2D;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 18px 80px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a,
+    a.link {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover,
+    a.link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 28px 0 16px;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .meta {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .notice,
+    .footer-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .meta-card span,
+    .meta-card a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc {
+      margin: 24px 0 28px;
+      padding: 20px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .toc li {
+      break-inside: avoid;
+      margin: 0 0 8px;
+    }
+
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 22px 20px;
+      margin-bottom: 14px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .section p,
+    .section li {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .section p {
+      margin: 0 0 12px;
+    }
+
+    .section ul,
+    .section ol {
+      margin: 0 0 12px;
+      padding-left: 20px;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    .section strong {
+      font-weight: 700;
+    }
+
+    .notice,
+    .footer-box {
+      padding: 18px 20px;
+      margin-top: 22px;
+    }
+
+    .notice p,
+    .footer-box p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--soft);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .button-link.primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .site-footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+    }
+
+    .top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      box-shadow: 0 10px 24px rgba(0,122,255,.28);
+    }
+
+    @media (max-width: 700px) {
+      .toc ol {
+        columns: 1;
+      }
+      .section h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media print {
+      .topbar, .top { display: none; }
+      body { background: #fff; color: #000; }
+      .section, .toc, .meta-card, .notice, .footer-box {
+        box-shadow: none;
+        border-color: #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar" id="top">
+    <div class="topbar-inner">
+      <a href="#" class="brand">APP_NAME Legal</a>
+      <div class="nav-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="mailto:labsluminex@gmail.com">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Terms of Service</div>
+      <h1>APP_NAME Terms of Service</h1>
+      <p class="lead">
+        These terms explain the rules for using APP_NAME, what the app provides,
+        and the responsibilities of both users and Luminex Labs.
+      </p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>Developer</strong>
+          <span>Luminex Labs</span>
+        </div>
+        <div class="meta-card">
+          <strong>Effective Date</strong>
+          <span>January 1, 2026</span>
+        </div>
+        <div class="meta-card">
+          <strong>Last Updated</strong>
+          <span>January 1, 2026</span>
+        </div>
+        <div class="meta-card">
+          <strong>Contact</strong>
+          <a href="mailto:labsluminex@gmail.com">labsluminex@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#service">Description of Service</a></li>
+        <li><a href="#accounts">User Accounts</a></li>
+        <li><a href="#responsibilities">User Responsibilities</a></li>
+        <li><a href="#ip">Intellectual Property</a></li>
+        <li><a href="#premium">Premium Features & Purchases</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#privacy">Data & Privacy</a></li>
+        <li><a href="#liability">Limitations of Liability</a></li>
+        <li><a href="#disclaimers">Disclaimers</a></li>
+        <li><a href="#use">Acceptable Use</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#changes">Modifications to Terms</a></li>
+        <li><a href="#law">Governing Law</a></li>
+        <li><a href="#severability">Severability</a></li>
+        <li><a href="#agreement">Entire Agreement</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section class="section" id="acceptance">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using <strong>APP_NAME</strong>, you agree to these Terms of Service and the Privacy Policy.</p>
+      <p>If you do not agree, do not use the app.</p>
+    </section>
+
+    <section class="section" id="service">
+      <h2>2. Description of Service</h2>
+      <p>APP_NAME is an invoice and business record management app that helps users:</p>
+      <ul>
+        <li>manage multiple businesses</li>
+        <li>manage clients and customer records</li>
+        <li>create invoices and track payments</li>
+        <li>generate PDF invoices</li>
+        <li>export business data</li>
+        <li>view reports and analytics</li>
+        <li>use optional Google Drive backup</li>
+        <li>use exchange rate conversion</li>
+        <li>receive local reminders and alerts</li>
+      </ul>
+      <p>Core app data is stored locally on your device.</p>
+    </section>
+
+    <section class="section" id="accounts">
+      <h2>3. User Accounts</h2>
+      <p>Core features of APP_NAME do not require a traditional account.</p>
+      <p>Google Sign-In is used only for optional backup and restore features. You are responsible for the security of your Google account and any access on your device.</p>
+    </section>
+
+    <section class="section" id="responsibilities">
+      <h2>4. User Responsibilities</h2>
+      <ul>
+        <li>Provide accurate business and invoice information</li>
+        <li>Comply with tax, invoicing, accounting, and business laws that apply to you</li>
+        <li>Use the app only for lawful purposes</li>
+        <li>Maintain your own backups where needed</li>
+        <li>Keep your device and access credentials secure</li>
+        <li>Review the accuracy of data before sharing invoices or reports</li>
+      </ul>
+      <p>You are responsible for your own records, customer communications, tax filings, and legal compliance.</p>
+    </section>
+
+    <section class="section" id="ip">
+      <h2>5. Intellectual Property</h2>
+      <p>APP_NAME, its design, code, templates, graphics, layout, branding, and related materials are owned by Luminex Labs or its licensors.</p>
+      <p>You keep ownership of the business data, invoice content, logos, and records you enter into the app.</p>
+      <p>PDF templates are licensed for in-app use only and may not be copied, resold, or redistributed as standalone assets.</p>
+    </section>
+
+    <section class="section" id="premium">
+      <h2>6. Premium Features & Purchases</h2>
+      <p>Premium features are planned for a future release.</p>
+      <ul>
+        <li>Pricing may change over time</li>
+        <li>Purchases will be processed through Google Play or Apple</li>
+        <li>Refunds will be handled according to the platform policy</li>
+        <li>Availability of premium features is not guaranteed forever</li>
+      </ul>
+    </section>
+
+    <section class="section" id="ads">
+      <h2>7. Advertising</h2>
+      <p>Advertising is planned for a future release.</p>
+      <p>The free tier may include advertising through Google AdMob. Premium access may remove ads.</p>
+      <p>Ad content is controlled by the advertising provider, and Luminex Labs is not responsible for the content, legality, or accuracy of third-party ads.</p>
+    </section>
+
+    <section class="section" id="privacy">
+      <h2>8. Data & Privacy</h2>
+      <p>Your use of APP_NAME is also governed by the Privacy Policy.</p>
+      <p>Your data belongs to you. We do not currently host your business records on our own servers. Because local storage is the main storage model, you are responsible for managing your device and using available backup options if you need extra protection.</p>
+    </section>
+
+    <section class="section" id="liability">
+      <h2>9. Limitations of Liability</h2>
+      <p>APP_NAME is provided on an <strong>“as is”</strong> and <strong>“as available”</strong> basis to the maximum extent permitted by law.</p>
+      <p>Luminex Labs is not responsible for:</p>
+      <ul>
+        <li>loss of data</li>
+        <li>deletion caused by uninstalling the app or device issues</li>
+        <li>tax or accounting mistakes</li>
+        <li>exchange rate inaccuracies or delays</li>
+        <li>financial, business, or legal decisions made using app reports</li>
+        <li>downtime or issues caused by Google, Apple, ExchangeRate-API, or other third-party services</li>
+        <li>indirect, incidental, special, consequential, or punitive damages</li>
+      </ul>
+    </section>
+
+    <section class="section" id="disclaimers">
+      <h2>10. Disclaimers</h2>
+      <p>APP_NAME is not accounting advice, tax advice, legal advice, financial advice, or an official compliance system.</p>
+      <p>Calculations, rates, summaries, and reports are provided for convenience. You are responsible for reviewing all invoice amounts, taxes, business details, and legal obligations before relying on them.</p>
+      <p>Exchange rates are approximate and may not be real-time.</p>
+    </section>
+
+    <section class="section" id="use">
+      <h2>11. Acceptable Use</h2>
+      <ul>
+        <li>Do not reverse engineer or attempt to extract source code except where law allows it</li>
+        <li>Do not interfere with app security or integrity</li>
+        <li>Do not use the app for fraud, money laundering, tax evasion, or illegal invoicing</li>
+        <li>Do not create misleading or fraudulent invoices</li>
+        <li>Do not distribute unauthorized copies of the app or its proprietary assets</li>
+      </ul>
+    </section>
+
+    <section class="section" id="termination">
+      <h2>12. Termination</h2>
+      <p>You may stop using APP_NAME at any time.</p>
+      <p>We may restrict access to app features where reasonably necessary if these Terms are violated or if required by law.</p>
+      <p>Uninstalling the app may remove locally stored data from your device. Google Drive backups, if any, remain until you delete them from your account.</p>
+    </section>
+
+    <section class="section" id="changes">
+      <h2>13. Modifications to Terms</h2>
+      <p>We may update these Terms from time to time.</p>
+      <p>When practical, changes will be reflected inside the app or in updated legal pages. Continued use of the app after changes take effect means you accept the updated Terms.</p>
+    </section>
+
+    <section class="section" id="law">
+      <h2>14. Governing Law</h2>
+      <p>These Terms are governed by the laws of <strong>Pakistan</strong>.</p>
+      <p>If a dispute arises, please contact <a class="link" href="mailto:labsluminex@gmail.com">labsluminex@gmail.com</a> first so we can try to resolve it informally. If a dispute cannot be resolved informally, it will be subject to the courts of Pakistan unless another law gives you mandatory consumer rights.</p>
+    </section>
+
+    <section class="section" id="severability">
+      <h2>15. Severability</h2>
+      <p>If any part of these Terms is found unenforceable, the remaining parts will still apply to the fullest extent permitted by law.</p>
+    </section>
+
+    <section class="section" id="agreement">
+      <h2>16. Entire Agreement</h2>
+      <p>These Terms together with the Privacy Policy form the full agreement between you and Luminex Labs about your use of APP_NAME.</p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>17. Contact</h2>
+      <p><strong>Developer:</strong> Luminex Labs</p>
+      <p><strong>Email:</strong> <a class="link" href="mailto:labsluminex@gmail.com">labsluminex@gmail.com</a></p>
+    </section>
+
+    <section class="notice">
+      <p><strong>Cookie notice:</strong> this legal web page does not use custom tracking cookies or JavaScript-based analytics. Your browser or hosting provider may still process basic technical requests needed to load the page.</p>
+    </section>
+
+    <section class="footer-box">
+      <p>You can also read these legal documents inside the APP_NAME mobile app.</p>
+      <div class="footer-actions">
+        <a class="button-link primary" href="privacy-policy.html">View Privacy Policy</a>
+        <a class="button-link" href="mailto:labsluminex@gmail.com">Contact Support</a>
+        <a class="button-link" href="#">Back to Top</a>
+      </div>
+    </section>
+
+    <div class="site-footer">
+      © 2026 Luminex Labs. All rights reserved.
+    </div>
+  </main>
+
+  <a href="#top" class="top" aria-label="Back to top">↑</a>
+</body>
+</html>

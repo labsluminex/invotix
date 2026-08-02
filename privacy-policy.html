@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APP_NAME — Privacy Policy</title>
+  <meta name="description" content="APP_NAME Privacy Policy by Luminex Labs" />
+  <style>
+    :root {
+      --primary: #007AFF;
+      --bg: #FFFFFF;
+      --surface: #FFFFFF;
+      --text: #1C1C1E;
+      --muted: #8E8E93;
+      --border: #E5E5EA;
+      --soft: #F6F7FB;
+      --max: 860px;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.04);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1C1C1E;
+        --surface: #232326;
+        --text: #F5F5F7;
+        --muted: #A1A1A8;
+        --border: #38383A;
+        --soft: #2A2A2D;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 18px 80px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a,
+    a.link {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover,
+    a.link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 28px 0 16px;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .meta {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .meta-card,
+    .toc,
+    .section,
+    .notice,
+    .footer-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .meta-card span,
+    .meta-card a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc {
+      margin: 24px 0 28px;
+      padding: 20px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .toc li {
+      break-inside: avoid;
+      margin: 0 0 8px;
+    }
+
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 22px 20px;
+      margin-bottom: 14px;
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .section p,
+    .section li {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .section p {
+      margin: 0 0 12px;
+    }
+
+    .section ul {
+      margin: 0 0 12px;
+      padding-left: 20px;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    .section strong {
+      font-weight: 700;
+    }
+
+    .notice,
+    .footer-box {
+      padding: 18px 20px;
+      margin-top: 22px;
+    }
+
+    .notice p,
+    .footer-box p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--soft);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .button-link.primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .site-footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+    }
+
+    .top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      box-shadow: 0 10px 24px rgba(0,122,255,.28);
+    }
+
+    @media (max-width: 700px) {
+      .toc ol {
+        columns: 1;
+      }
+      .section h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media print {
+      .topbar, .top { display: none; }
+      body { background: #fff; color: #000; }
+      .section, .toc, .meta-card, .notice, .footer-box {
+        box-shadow: none;
+        border-color: #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar" id="top">
+    <div class="topbar-inner">
+      <a href="#" class="brand">APP_NAME Legal</a>
+      <div class="nav-links">
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="mailto:labsluminex@gmail.com">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Privacy Policy</div>
+      <h1>APP_NAME Privacy Policy</h1>
+      <p class="lead">
+        This page explains what information APP_NAME handles, how that information is used,
+        and what choices users have when using the app and related features.
+      </p>
+
+      <div class="meta">
+        <div class="meta-card">
+          <strong>Developer</strong>
+          <span>Luminex Labs</span>
+        </div>
+        <div class="meta-card">
+          <strong>Effective Date</strong>
+          <span>January 1, 2026</span>
+        </div>
+        <div class="meta-card">
+          <strong>Last Updated</strong>
+          <span>January 1, 2026</span>
+        </div>
+        <div class="meta-card">
+          <strong>Contact</strong>
+          <a href="mailto:labsluminex@gmail.com">labsluminex@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#intro">Introduction & Overview</a></li>
+        <li><a href="#collect">Information We Collect</a></li>
+        <li><a href="#use">How We Use Information</a></li>
+        <li><a href="#storage">Data Storage & Security</a></li>
+        <li><a href="#thirdparty">Third-Party Services</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#purchases">In-App Purchases</a></li>
+        <li><a href="#sharing">Data Sharing & Disclosure</a></li>
+        <li><a href="#rights">Your Rights</a></li>
+        <li><a href="#children">Children’s Privacy</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#transfers">International Data Transfers</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <section class="section" id="intro">
+      <h2>1. Introduction & Overview</h2>
+      <p><strong>APP_NAME</strong> is an invoice management app developed by <strong>Luminex Labs</strong>.</p>
+      <p>This Privacy Policy explains what information is handled when you use the app, how it is used, and what choices you have.</p>
+      <p>This policy applies to the mobile app, optional Google Sign-In and Google Drive backup features, and the public legal web pages.</p>
+    </section>
+
+    <section class="section" id="collect">
+      <h2>2. Information We Collect</h2>
+      <p><strong>Information you provide directly:</strong></p>
+      <ul>
+        <li>Business profile data such as business name, address, email, phone number, tax ID, logo, signature, notes, invoice terms, and custom text</li>
+        <li>Client and customer information such as names, email addresses, phone numbers, and billing or shipping addresses</li>
+        <li>Invoice data such as items, quantities, dates, totals, statuses, taxes, discounts, and payment terms</li>
+        <li>Payment records such as paid amounts, methods, references, and dates</li>
+        <li>Bank account details such as account number, IBAN, SWIFT, and related payment information</li>
+        <li>Product or service catalog data such as names, prices, stock quantities, and descriptions</li>
+      </ul>
+      <p><strong>Information collected automatically:</strong></p>
+      <ul>
+        <li>Device information such as model, operating system version, app version, and build number</li>
+        <li>A device identifier used to help backup, restore, and future sync features work correctly</li>
+        <li>Future: anonymous usage analytics through Firebase Analytics</li>
+        <li>Future: crash logs and diagnostics through Firebase Crashlytics</li>
+      </ul>
+      <p><strong>Information from third-party services:</strong></p>
+      <ul>
+        <li>Google Sign-In may provide your name, email address, and profile photo</li>
+        <li>Google Drive is used only for backup and restore in your own Google account</li>
+        <li>ExchangeRate-API provides exchange rate data and does not receive your invoice or client data</li>
+        <li>Future: AdMob may collect advertising and device identifiers</li>
+        <li>Future: Firebase Analytics may collect anonymous usage events</li>
+      </ul>
+    </section>
+
+    <section class="section" id="use">
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>Provide invoice creation, business management, client management, and payment tracking</li>
+        <li>Generate PDFs, exports, reports, and analytics</li>
+        <li>Save, restore, and organize your local data</li>
+        <li>Back up and restore your data using your Google Drive account</li>
+        <li>Schedule and display local notifications for reminders and alerts</li>
+        <li>Fetch exchange rates for currency conversion</li>
+        <li>Future: improve app quality and feature decisions through analytics</li>
+        <li>Future: diagnose bugs and crashes</li>
+        <li>Future: display advertising in the free tier</li>
+        <li>Future: process premium feature purchases</li>
+      </ul>
+    </section>
+
+    <section class="section" id="storage">
+      <h2>4. Data Storage & Security</h2>
+      <p>All core app data is stored locally on your device using a local database. Luminex Labs does not operate a server-side database for your business data at this time.</p>
+      <p>If you use backup and restore, backup files are stored in your own Google Drive account. We do not keep a copy on our own servers.</p>
+      <p>Data sent to third-party services such as Google APIs is transmitted over HTTPS/TLS. Images such as business logos and signatures are stored locally in base64 form inside app data.</p>
+      <p>You control your data. You can create, edit, delete, and export your records from inside the app.</p>
+    </section>
+
+    <section class="section" id="thirdparty">
+      <h2>5. Third-Party Services</h2>
+      <p><strong>Currently active:</strong></p>
+      <ul>
+        <li>Google Sign-In — <a class="link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li>Google Drive API — <a class="link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li>ExchangeRate-API — <a class="link" href="https://www.exchangerate-api.com/docs/terms-of-use" target="_blank" rel="noopener">ExchangeRate-API Terms</a></li>
+      </ul>
+      <p><strong>Planned future services:</strong></p>
+      <ul>
+        <li>Google AdMob — <a class="link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li>Firebase Analytics — <a class="link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></li>
+        <li>Firebase Crashlytics — <a class="link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></li>
+        <li>Google Play Billing — <a class="link" href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document" target="_blank" rel="noopener">Google Legal Terms</a></li>
+        <li>Apple StoreKit — <a class="link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+      </ul>
+    </section>
+
+    <section class="section" id="ads">
+      <h2>6. Advertising</h2>
+      <p>Advertising is planned for a future release.</p>
+      <p>APP_NAME may include banner, interstitial, and rewarded ads through Google AdMob. AdMob may collect advertising ID, device data, and basic usage signals to deliver personalized or non-personalized ads.</p>
+      <p>When ads are added, users will be informed and any legally required consent flow will be shown where applicable, including GDPR-related ad consent in supported regions.</p>
+    </section>
+
+    <section class="section" id="purchases">
+      <h2>7. In-App Purchases</h2>
+      <p>Premium features are planned for a future release.</p>
+      <p>Purchases will be processed by Google Play or the Apple App Store. Luminex Labs does not collect or store your payment card details.</p>
+      <p>Pricing, billing, renewals, cancellations, and refunds are governed by the platform you use.</p>
+    </section>
+
+    <section class="section" id="sharing">
+      <h2>8. Data Sharing & Disclosure</h2>
+      <p>We do not sell your personal data.</p>
+      <p>We do not share your business data with third parties except where sharing happens because of your own action or because it is necessary for a feature to work.</p>
+      <ul>
+        <li>Google Drive backup or restore initiated by you</li>
+        <li>Sending invoices, PDFs, or exports through apps selected by you</li>
+        <li>Compliance with valid legal obligations or court orders</li>
+      </ul>
+      <p>Future analytics will be limited to anonymized or aggregated information where possible.</p>
+    </section>
+
+    <section class="section" id="rights">
+      <h2>9. Your Rights</h2>
+      <ul>
+        <li>View your stored data</li>
+        <li>Export your data as CSV, JSON, or ZIP</li>
+        <li>Delete records inside the app</li>
+        <li>Delete Google Drive backups from your own Drive account</li>
+        <li>Future: opt out of analytics where offered</li>
+        <li>Future: opt out of personalized ads where offered</li>
+      </ul>
+      <p>If you contact us at <a class="link" href="mailto:labsluminex@gmail.com">labsluminex@gmail.com</a>, we will try to respond within 48 hours.</p>
+      <p>Users in the EEA, UK, California, or similar jurisdictions may have additional legal rights under applicable privacy laws.</p>
+    </section>
+
+    <section class="section" id="children">
+      <h2>10. Children’s Privacy</h2>
+      <p>APP_NAME is a business app and is not designed for children under 13. It is also not designed for children under 16 where GDPR-related age thresholds apply.</p>
+      <p>We do not knowingly collect personal information from children. If we learn that a child has provided personal information through the app, we will take steps to delete it as soon as reasonably possible.</p>
+    </section>
+
+    <section class="section" id="retention">
+      <h2>11. Data Retention</h2>
+      <p>Local app data remains on your device while the app is installed unless you delete it earlier.</p>
+      <p>If you uninstall the app, local app data may be removed from your device according to platform behavior. Google Drive backups remain in your Drive until you delete them.</p>
+      <p>Future analytics and crash data, when added, will follow the retention policies of the relevant Google or Firebase service.</p>
+    </section>
+
+    <section class="section" id="transfers">
+      <h2>12. International Data Transfers</h2>
+      <p>Because third-party services such as Google and ExchangeRate-API may operate globally, some limited data connected to those services may be processed outside your country.</p>
+      <p>Any such processing is handled under the policies and safeguards of those third-party providers.</p>
+    </section>
+
+    <section class="section" id="changes">
+      <h2>13. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time.</p>
+      <p>If changes are material, we may notify users inside the app or through an update notice. Continued use of APP_NAME after an update means you accept the revised policy unless stricter consent is required by law.</p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>14. Contact Us</h2>
+      <p><strong>Developer:</strong> Luminex Labs</p>
+      <p><strong>Email:</strong> <a class="link" href="mailto:labsluminex@gmail.com">labsluminex@gmail.com</a></p>
+      <p><strong>Response time:</strong> Within 48 hours</p>
+    </section>
+
+    <section class="notice">
+      <p><strong>Cookie notice:</strong> this legal web page does not use custom tracking cookies or JavaScript-based analytics. Your browser or hosting provider may still process basic technical requests needed to load the page.</p>
+    </section>
+
+    <section class="footer-box">
+      <p>You can also read these legal documents inside the APP_NAME mobile app.</p>
+      <div class="footer-actions">
+        <a class="button-link primary" href="terms-of-service.html">View Terms of Service</a>
+        <a class="button-link" href="mailto:labsluminex@gmail.com">Contact Support</a>
+        <a class="button-link" href="#">Back to Top</a>
+      </div>
+    </section>
+
+    <div class="site-footer">
+      © 2026 Luminex Labs. All rights reserved.
+    </div>
+  </main>
+
+  <a href="#top" class="top" aria-label="Back to top">↑</a>
+</body>
+</html>
